@@ -1,0 +1,28 @@
+/* This file is managed by 'repo_helper'. Don't edit it directly. */
+
+div.highlight {
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+
+.field-list dt, dl.simple dt {
+	margin-top: 0.5rem;
+}
+
+div.versionchanged ul, div.versionremoved ul {
+	margin-left: 20px;
+	margin-top: 0;
+}
+
+div.highlight-pycon span.gp {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.longtable.autosummary {
+	width: 100%;
+}
