@@ -1,5 +1,22 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-dist-meta (0.8.0+dfsg-3) unstable; urgency=medium
 
-  * Initial release
+  * debian/control:
+      - Added dependency for running tests
+      - Added 'Testsuite: autopkgtest-pkg-pybuild'
+  * debian/patches: Skipped function with error
+  * debian/rules: Enabled test execution
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Mon, 01 Jan 2024 19:55:07 -0300
+
+python-dist-meta (0.8.0+dfsg-2) unstable; urgency=medium
+
+  * Source-only load for test migration
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Wed, 30 Aug 2023 22:40:25 -0300
+
+python-dist-meta (0.8.0+dfsg-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1027685)
+  * Repack the tarball to exclude test .whl files, some of which are non-DFSG.
+
+ -- Josenilson Ferreira da Silva <nilsonfsilva@hotmail.com>  Sun, 01 Jan 2023 12:06:18 -0300

@@ -1,0 +1,67 @@
+# Configuration for 'repo_helper' (https://github.com/domdfcoding/repo_helper)
+---
+modname: 'dist-meta'
+copyright_years: '2021'
+author: 'Dominic Davis-Foster'
+email: 'dominic@davis-foster.co.uk'
+username: 'repo-helper'
+assignee: 'domdfcoding'
+primary_conda_channel: 'domdfcoding'
+version: '0.8.0'
+license: 'MIT'
+short_desc: 'Parse and create Python distribution metadata.'
+
+min_coverage: 97
+docs_fail_on_warning: true
+sphinx_html_theme: furo
+
+python_versions:
+ '3.6':
+ '3.7':
+ '3.8':
+ '3.9':
+ "3.10":
+ "3.11":
+ 3.12-dev:
+ pypy36:
+ pypy37:
+  experimental: False
+ pypy38:
+
+conda_channels:
+ - conda-forge
+
+sphinx_conf_epilogue:
+ - nitpicky = True
+ - from dist_meta.distributions import Distribution
+ - import dist_meta.record
+ - dist_meta.record.__dict__["Distribution"] = Distribution
+ - needspace_amount = r"5\baselineskip"
+ - latex_elements["preamble"] = "\n\\usepackage{tcolorbox}"
+
+keywords:
+ - packaging
+ - dist-info
+ - metadata
+ - pypi
+
+extra_sphinx_extensions:
+ - sphinx_toolbox.more_autosummary.column_widths
+ - sphinx_toolbox.latex.succinct_seealso
+ - sphinx_packaging.peps
+ - local_extension
+
+exclude_files:
+ - contributing
+
+intersphinx_mapping:
+ - "'shippinglabel': ('https://shippinglabel.readthedocs.io/en/latest/', None)"
+ - "'entrypoints': ('https://entrypoints.readthedocs.io/en/latest/', None)"
+
+preserve_custom_theme: true
+
+classifiers:
+ - 'Development Status :: 4 - Beta'
+ - 'Intended Audience :: Developers'
+ - 'Topic :: Software Development :: Libraries :: Python Modules'
+ - 'Topic :: System :: Archiving :: Packaging'
